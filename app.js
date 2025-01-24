@@ -1,6 +1,6 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-// VARIABLES
+// VARIABLES GLOBALES
 
 let amigos = [];
 let btnAgregar = document.getElementById("btnAgregar");
@@ -50,8 +50,6 @@ function sortearNombre(amigos) {
   let numero = generarNumeroAleatorio(amigos.length);
   resultado.innerHTML = `<li>El amigo secreto sorteado es: ${amigos[numero]}</li>`;
 }
-
-
 
 // CODIGO PRINCIPAL
 
