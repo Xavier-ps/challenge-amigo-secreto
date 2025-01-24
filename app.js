@@ -3,10 +3,10 @@
 // VARIABLES
 
 let amigos = [];
-let nombre = "";
 let btnAgregar = document.getElementById("btnAgregar");
 let elementoNombre = document.getElementById("amigo");
 let listaAmigos = document.getElementById("listaAmigos");
+let resultado = document.getElementById("resultado");
 
 // FUNCIONES ESPECIFICAS
 
@@ -15,8 +15,7 @@ function validarCampoVacío(nombre) {
   
   if(nombre == ""){
     valida = false;
-  }
-  else {
+  } else {
     valida = true;
   }
 
@@ -25,6 +24,7 @@ function validarCampoVacío(nombre) {
 
 function crearListaAmigos(amigos, listaAmigos) {
   listaAmigos.innerHTML = "";
+  resultado.innerHTML = "";
 
   for (let i = 0; i < amigos.length; i++) {
     const nombre = amigos[i];
@@ -32,10 +32,31 @@ function crearListaAmigos(amigos, listaAmigos) {
   }
 }
 
+function validarListaAmigosVacia(amigos) {
+  if (amigos.length > 0) {
+    valida = true;
+  } else {
+    valida = false;
+  }
+
+  return valida;
+}
+
+function generarNumeroAleatorio(tamanio) {
+  return Math.floor(Math.random()*tamanio);
+}
+
+function sortearNombre(amigos) {
+  let numero = generarNumeroAleatorio(amigos.length);
+  resultado.innerHTML = `<li>El amigo secreto sorteado es: ${amigos[numero]}</li>`;
+}
+
+
+
 // CODIGO PRINCIPAL
 
 btnAgregar.addEventListener("click", function(){
-  nombre = document.getElementById("amigo").value;
+  let nombre = document.getElementById("amigo").value;
 
   if(validarCampoVacío(nombre)){
     amigos.push(nombre);
@@ -48,3 +69,13 @@ btnAgregar.addEventListener("click", function(){
   crearListaAmigos(amigos, listaAmigos);
 });
 
+btnSortear.addEventListener("click", function () {
+  if (validarListaAmigosVacia(amigos)) {
+    sortearNombre(amigos);
+
+    listaAmigos.innerHTML = "";
+    amigos = [];
+  } else {
+    alert("Por favor, primero agregar los nombres a sortear");
+  }
+})
