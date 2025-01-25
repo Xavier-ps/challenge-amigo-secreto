@@ -18,11 +18,15 @@ Este challenge consiste en realizar un programa que permita crear una lista de n
 ## Instalación y uso<a name="id3"></a>
 Al ser un programa realizado en javascript, no se requiere la instalación de ningún software específico para su uso, solamente es necesario tener un navegador instalado en la computadora.
 
+Por medio del siguiente link se puede acceder al sitio web para que puedan hacer uso del mismo.
+
+https://xavier-ps.github.io/challenge-amigo-secreto/
+
 ## Quién lo mantiene<a name="id4"></a>
 El programa es desarrollado por mi persona, Xavier Picado Segura, estudiante de programaición como parte del programa de estudio.
 
 ## El estado del proyecto<a name="id5"></a>
-Actualmente se encuentra en desarrollo.
+Actualmente se encuentra terminada y publicada.
 
 ## Tecnologías usadas<a name="id6"></a>
 Para la implementación del proyecto se utiliza HTML, Javascript y CSS.
